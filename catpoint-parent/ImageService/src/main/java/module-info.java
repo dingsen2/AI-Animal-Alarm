@@ -5,5 +5,5 @@ module ImageService{
     requires software.amazon.awssdk.regions;
     requires software.amazon.awssdk.services.rekognition;
     requires java.desktop;
-    exports com.udacity.catpoint.ImageService;
+    exports com.udacity.catpoint.security.ImageService;
 }

@@ -1,21 +1,18 @@
 package com.udacity.catpoint.security.service;
 
 
-import com.udacity.catpoint.ImageService.ImageService;
+import com.udacity.catpoint.security.ImageService.ImageService;
 import com.udacity.catpoint.security.application.StatusListener;
 import com.udacity.catpoint.security.data.*;
-import com.udacity.catpoint.security.service.SecurityService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
-import org.junit.jupiter.params.provider.ValueSource;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import static org.junit.jupiter.api.Assertions.*;
 import java.awt.image.BufferedImage;
-import java.nio.Buffer;
 import java.util.*;
 
 import static org.mockito.Mockito.*;
