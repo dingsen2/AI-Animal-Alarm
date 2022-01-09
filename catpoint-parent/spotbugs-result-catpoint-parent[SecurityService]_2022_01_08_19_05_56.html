@@ -1,0 +1,337 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta charset="UTF-8"/>
+      <title>SpotBugs Report</title>
+      <style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+		</style>
+   </head>
+   <body>
+      <h1>SpotBugs Report</h1>
+      <p>Produced using <a href="https://spotbugs.github.io">SpotBugs</a>4.4.2.</p>
+      <p>Project: 
+			catpoint-parent[SecurityService]</p>
+      <h2>Metrics</h2>
+      <p>497 lines of code analyzed,
+	in 17 classes, 
+	in 3 packages.</p>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Metric</th>
+            <th align="right">Total</th>
+            <th align="right">Density*</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>High Priority Warnings</td>
+            <td align="right"/>
+            <td align="right">NaN</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>Medium Priority Warnings</td>
+            <td align="right">8</td>
+            <td align="right">16.10</td>
+         </tr>
+         <tr class="$totalClass">
+            <td>
+               <b>Total Warnings</b>
+            </td>
+            <td align="right">
+               <b>8</b>
+            </td>
+            <td align="right">
+               <b>16.10</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <i>(* Defects per Thousand lines of non-commenting source statements)</i>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Summary</h2>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Warning Type</th>
+            <th align="right">Number</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+            </td>
+            <td align="right">1</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+            </td>
+            <td align="right">5</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+            </td>
+            <td align="right">2</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <b>Total</b>
+            </td>
+            <td align="right">
+               <b>8</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h1>Warnings</h1>
+      <p>Click on each warning link to see a full description of the issue, and
+	    details of how to resolve it.</p>
+      <h2>
+         <a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#SE_BAD_FIELD_STORE">Non-serializable value stored into instance field of a serializable class</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>com.udacity.catpoint.security.data.PretendDatabaseSecurityRepositoryImpl stored into non-transient field CatpointGui.securityRepository<br/>
+                  <br/>
+                  <br/>In file CatpointGui.java,
+					
+						line 18<br/>In class com.udacity.catpoint.security.application.CatpointGui<br/>Field com.udacity.catpoint.security.application.CatpointGui.securityRepository<br/>Actual type com.udacity.catpoint.security.data.PretendDatabaseSecurityRepositoryImpl<br/>At CatpointGui.java:[line 18]</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>com.udacity.catpoint.security.data.PretendDatabaseSecurityRepositoryImpl.getSensors() may expose internal representation by returning PretendDatabaseSecurityRepositoryImpl.sensors<br/>
+                  <br/>
+                  <br/>In file PretendDatabaseSecurityRepositoryImpl.java PretendDatabaseSecurityRepositoryImpl.java,
+					
+						line 80 80<br/>In class com.udacity.catpoint.security.data.PretendDatabaseSecurityRepositoryImpl<br/>In method com.udacity.catpoint.security.data.PretendDatabaseSecurityRepositoryImpl.getSensors()<br/>Field com.udacity.catpoint.security.data.PretendDatabaseSecurityRepositoryImpl.sensors<br/>At PretendDatabaseSecurityRepositoryImpl.java:[line 80]<br/>At PretendDatabaseSecurityRepositoryImpl.java:[line 80]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new com.udacity.catpoint.security.application.ControlPanel(SecurityService) may expose internal representation by storing an externally mutable object into ControlPanel.securityService<br/>
+                  <br/>
+                  <br/>In file ControlPanel.java ControlPanel.java,
+					
+						line 25 25<br/>In class com.udacity.catpoint.security.application.ControlPanel<br/>In method new com.udacity.catpoint.security.application.ControlPanel(SecurityService)<br/>Field com.udacity.catpoint.security.application.ControlPanel.securityService<br/>Local variable named securityService<br/>At ControlPanel.java:[line 25]<br/>At ControlPanel.java:[line 25]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new com.udacity.catpoint.security.application.ImagePanel(SecurityService) may expose internal representation by storing an externally mutable object into ImagePanel.securityService<br/>
+                  <br/>
+                  <br/>In file ImagePanel.java ImagePanel.java,
+					
+						line 31 31<br/>In class com.udacity.catpoint.security.application.ImagePanel<br/>In method new com.udacity.catpoint.security.application.ImagePanel(SecurityService)<br/>Field com.udacity.catpoint.security.application.ImagePanel.securityService<br/>Local variable named securityService<br/>At ImagePanel.java:[line 31]<br/>At ImagePanel.java:[line 31]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new com.udacity.catpoint.security.application.SensorPanel(SecurityService) may expose internal representation by storing an externally mutable object into SensorPanel.securityService<br/>
+                  <br/>
+                  <br/>In file SensorPanel.java SensorPanel.java,
+					
+						line 33 33<br/>In class com.udacity.catpoint.security.application.SensorPanel<br/>In method new com.udacity.catpoint.security.application.SensorPanel(SecurityService)<br/>Field com.udacity.catpoint.security.application.SensorPanel.securityService<br/>Local variable named securityService<br/>At SensorPanel.java:[line 33]<br/>At SensorPanel.java:[line 33]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new com.udacity.catpoint.security.service.SecurityService(SecurityRepository, ImageService) may expose internal representation by storing an externally mutable object into SecurityService.securityRepository<br/>
+                  <br/>
+                  <br/>In file SecurityService.java SecurityService.java,
+					
+						line 29 29<br/>In class com.udacity.catpoint.security.service.SecurityService<br/>In method new com.udacity.catpoint.security.service.SecurityService(SecurityRepository, ImageService)<br/>Field com.udacity.catpoint.security.service.SecurityService.securityRepository<br/>Local variable named securityRepository<br/>At SecurityService.java:[line 29]<br/>At SecurityService.java:[line 29]</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="Warnings_STYLE">Dodgy code Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#SF_SWITCH_NO_DEFAULT">Switch statement found where default case is missing</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Switch statement found in com.udacity.catpoint.security.service.SecurityService.handleSensorActivated() where default case is missing<br/>
+                  <br/>
+                  <br/>In file SecurityService.java SecurityService.java,
+					
+						lines 107 107
+						    to 109 109<br/>In class com.udacity.catpoint.security.service.SecurityService<br/>In method com.udacity.catpoint.security.service.SecurityService.handleSensorActivated()<br/>At SecurityService.java:[lines 107-109]<br/>At SecurityService.java:[lines 107-109]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#SF_SWITCH_NO_DEFAULT">Switch statement found where default case is missing</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Switch statement found in com.udacity.catpoint.security.service.SecurityService.handleSensorDeactivated() where default case is missing<br/>
+                  <br/>
+                  <br/>In file SecurityService.java SecurityService.java,
+					
+						lines 117 117
+						    to 118 118<br/>In class com.udacity.catpoint.security.service.SecurityService<br/>In method com.udacity.catpoint.security.service.SecurityService.handleSensorDeactivated()<br/>At SecurityService.java:[lines 117-118]<br/>At SecurityService.java:[lines 117-118]</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h1>
+         <a name="Details">Warning Types</a>
+      </h1>
+      <h2>
+         <a name="EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+      </h2>
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+      </h2>
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="SF_SWITCH_NO_DEFAULT">Switch statement found where default case is missing</a>
+      </h2>
+
+  <p> This method contains a switch statement where default case is missing.
+  Usually you need to provide a default case.</p>
+  <p>Because the analysis only looks at the generated bytecode, this warning can be incorrect triggered if
+the default case is at the end of the switch statement and the switch statement doesn't contain break statements for other
+cases.
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="SE_BAD_FIELD_STORE">Non-serializable value stored into instance field of a serializable class</a>
+      </h2>
+
+<p> A non-serializable value is stored into a non-transient field
+of a serializable class.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+   </body>
+</html>
