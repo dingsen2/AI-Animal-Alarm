@@ -3,4 +3,5 @@ This App tracks the status of sensors, monitors camera input, and changes the al
 
 ## Installation
 Clone the Github repository and go to the **AI-Cat-Alarm/catpoint-parent/SecurityService/target/** folder. Then run the App by running the jar file `security-module-1.0-SNAPSHOT-jar-with-dependencies.jar`. You can also run the jar file in the terminal by typing:  
+
 `java -jar security-module-1.0-SNAPSHOT-jar-with-dependencies.jar`.
